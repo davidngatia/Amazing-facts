@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import {Quote } from '../quote'
+import { Component, OnInit, } from '@angular/core';
+import {Quote,} from '../quote'
 
 @Component({
   selector: 'app-quote',
@@ -18,13 +18,12 @@ export class QuoteComponent implements OnInit {
     new Quote(6, 'Sometimes your heart needs more time to accept what your mind already knows.','by David Ngatia'),
     new Quote(7, 'I never urgue. I just explain why I am right.','by Sarah Suarez'),
 ]
+
 toogleDetails(index){
-  this.quotes[index] .showDescription = !this.quotes[index].showDescription;
+  this.quotes[index].showDescription = !this.quotes[index].showDescription;
 }
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+constructor() { }
+ngOnInit() {
+}
 }
