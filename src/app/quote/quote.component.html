@@ -1,0 +1,13 @@
+<div class = "container">
+  <h1>Quotes</h1>
+  <hr>
+<ul>
+  <div *ngFor='let quote of quotes'>
+    <li >{{quote.name}}</li>
+    <app-quote-details [quote]='quote'></app-quote-details>
+  </div>
+</ul>
+  <p *ngIf='quotes.length > 9'>You have too many quotes</p>
+
+
+  </div>
