@@ -7,8 +7,7 @@ import {Quote,} from '../quote'
   styleUrls: ['./quote.component.css']
 })
 export class QuoteComponent implements OnInit {
-
-
+ 
   quotes = [
     new Quote(1,'The past is past. Put it down and move foward.','by Bonface Good',new Date(2018,10,2)),
     new Quote(2,'Trust is like an eraser, it gets smaller with each mistake.','by moses Kiplagat',new Date(2018,10,5)),
@@ -20,11 +19,6 @@ export class QuoteComponent implements OnInit {
 ]
 
 
-addNewQuote(quote){
-  let quoteLength = this.quotes.length;
-  quote.id=quoteLength+1;
-  quote.completeDate = new Date(quote.completeDate)
-  this.quotes.push(quote)
 
 
 deleteQuote(isComplete,index){
@@ -36,6 +30,12 @@ deleteQuote(isComplete,index){
       }
       }
 
+      addNewQuote(quote){
+        let quoteLength = this.quotes.length;
+        quote.id=quoteLength+1;
+        quote.completeDate = new Date(quote.completeDate)
+        this.quotes.push(quote)
+      }
 
 toogleDetails(index){
   this.quotes[index].showDescription = !this.quotes[index].showDescription;
@@ -43,5 +43,6 @@ toogleDetails(index){
 
 constructor() { }
 ngOnInit() {
+  
 }
 }
