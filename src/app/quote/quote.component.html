@@ -3,6 +3,7 @@
   <hr>
 <ul>
   <div *ngFor='let quote of quotes;let i = index'>
+   <li>id="{{i}}" appStrikethrough>{{quote.name}}due on {{quote.completeDate|date|uppercase}}</li> 
     <li >{{quote.name}}</li>
     <button (click)='toogleDetails(i)'>Toogle Details</button>
 
