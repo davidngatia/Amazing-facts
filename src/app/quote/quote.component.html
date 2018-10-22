@@ -1,13 +1,14 @@
-<div class = "container">
-  <h1>Quotes</h1>
+
+  <h1>Amazing Facts</h1>
   <hr>
+  <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
 <div class="container">
     <div class="row" *ngFor="let quote of quotes;let i = 'index'">
         <div class="row">
 
-            <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+           
         </div>
-            <h4 id="{{i}}" appStrikethrough>{{quote.name}} due on {{quote.completeDate|date|uppercase}}</h4>
+            <h4 id="{{i}}" appStrikethrough>{{quote.name}}</h4>
             <button class="btn btn-primary" (click)='toogleDetails(i)'>Toogle Details</button>
         
         
@@ -20,4 +21,3 @@
 </div>
 
 <p *ngIf='quotes.length > 9'>You have too many quotes</p>
-  </div>

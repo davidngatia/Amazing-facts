@@ -1,3 +1,4 @@
 <p>{{quote.description}}</p>
+<h4>due on {{quote.completeDate|date|uppercase}}</h4>
 <p>complete in {{quote.completeDate|dateCount}} days</p>
 <button class="btn btn-danger" (click) = 'quoteDelete(true)'> Delete Quote </button>
