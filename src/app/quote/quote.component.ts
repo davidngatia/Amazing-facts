@@ -47,3 +47,4 @@ deleteQuote(isComplete,index){
       quote.completeDate = new Date(quote.completeDate)
       this.quotes.push(quote)
     }
+  }

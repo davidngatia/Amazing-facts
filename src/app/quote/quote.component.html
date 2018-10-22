@@ -9,15 +9,16 @@
            
         </div>
             <h4 id="{{i}}" appStrikethrough>{{quote.name}}</h4>
-            <button class="btn btn-primary" (click)='toogleDetails(i)'>Toogle Details</button>
+            <button class="btn btn-primary" (click)='toogleDetails(i)'> Details</button>
         
         
         <div class="row" *ngIf="quote.showDescription">
         <app-quote-details  [quote]='quote' (isComplete)= 'deleteQuote($event,i)'></app-quote-details>
     </div>
     
+    
 </div>
 
 </div>
 
-<p *ngIf='quotes.length > 9'>You have too many quotes</p>
+<p *ngIf='quotes.length > 7'>You have too many quotes</p>
