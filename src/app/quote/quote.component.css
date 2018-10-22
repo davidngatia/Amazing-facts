@@ -1,9 +1,10 @@
 .container{
-    background-color: peru
+    background-color:lightskyblue
     
 }
 h1 {
     color: purple;
     text-align: center;
-    background-color:lightseagreen
+    background-color:lightseagreen;
+    font-size: 50px;
 }
