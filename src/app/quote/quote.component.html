@@ -5,7 +5,7 @@
 <div class="container">
     <div class="row" *ngFor="let quote of quotes;let i = 'index'">
         <div class="row">
-
+           
            
         </div>
             <h4 id="{{i}}" appStrikethrough>{{quote.name}}</h4>
@@ -16,7 +16,8 @@
         <app-quote-details  [quote]='quote' (isComplete)= 'deleteQuote($event,i)'></app-quote-details>
     </div>
     
-    
+    <button (click)="upVote(i)">Likes{{quote.upVote}}</button>
+    <button (click)="downVote(i)">Dislikes{{quote.downVote}}</button>
 </div>
 
 </div>
